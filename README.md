@@ -17,17 +17,17 @@ o Use cv2.threshold() or cv2.adaptiveThreshold() to make the image appear to hav
 Now that your image is black and white, we need to figure out where the "lumps" of white pixels (characters) are.
 4. Template Matching
 This is the heart of the program. You now have a rectangular box for each character from Step 3.
-1. Crop
-2. Scale the ROI
-3. Compare with all templates
-4. Find the highest score
+ 1. Crop
+ 2. Scale the ROI
+ 3. Compare with all templates
+ 4. Find the highest score
 5. Display Results
 Once you know what character is in the box (e.g., 'C' from the highest score in Step 4),
 Considerations and Limitations
-1. Font: The program will work best if the font in the desired image is very similar to the font in your template.
-2. Scale: If the characters in the image are very different in size or size from the template, Comparison will fail.
-3. Rotation: If the text is tilted, even slightly, matchTemplate may not detect it.
-4. Text stuck together. (Overlapping): If two characters are too close together, findContours may consider them to be a single "block," causing recognition failure.
+ 1. Font: The program will work best if the font in the desired image is very similar to the font in your template.
+ 2. Scale: If the characters in the image are very different in size or size from the template, Comparison will fail.
+ 3. Rotation: If the text is tilted, even slightly, matchTemplate may not detect it.
+ 4. Text stuck together. (Overlapping): If two characters are too close together, findContours may consider them to be a single "block," causing recognition failure.
 
 What to prepare:
 1. Font template: 30x30 px. Any font is required, but they must be identical. (Focus on fonts with clear characters, especially I i L l P p S s O o 0, which have high similarity.)
